@@ -1,0 +1,88 @@
+* {
+ font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+ background-color: #111 !important;
+}
+.todo-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.form-control:focus P
+    box-shadow: none;
+}
+.todo-input {
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ccc; /* Add a visible border */
+    background-color: #f1f1f1;
+    padding: 0px 20px;
+}
+.todo-input:focus {
+    border: 1px solid #ff6a00;  /* Optional: highlight with primary color */
+    box-shadow: none;           /* Keep shadow disabled */
+    outline: none;              /* Clean focus style */
+}
+.btn-add {
+    border-radius: 0 30px 30px 0;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn-add:hover {
+    background-color: #e85c00;
+}
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.todo-text {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.check-icon {
+    color: orange;
+}
+.delete-btn {
+    color: #666;
+    background: none;
+    border: none;
+}
+.unchecked-icon {
+    color: #ff6a00;
+    font-size: 10px;
+}
+.todo-list {
+    max-height: 300px;          /* Set the maximum height */
+    overflow-y: auto;           /* Enable vertical scrollbar if needed */
+    padding-right: 10px;        /* Space for scrollbar */
+}
+
+/* Optional: Add custom scrollbar styling (optional aesthetic) */
+.todo-list::-webkit-scrollbar {
+    width: 6px;
+}
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: #ff6a00;
+    border-radius: 10px;
+}
+.todo-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
