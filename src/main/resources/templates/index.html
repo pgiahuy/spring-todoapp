@@ -16,13 +16,13 @@
 <body>
     <div class="todo-container">
         <h4>
-            <i class="bi bi-calendar-check"></i> To-Do List
+            <i class="bi bi-calendar-check"></i> TODO LIST
         </h4>
         <form class="d-flex mb-4 mt-4" th:action="@{/add}" method="post">
             <input type="text" name="title" placeholder="Add your task" class="form-control todo-input" required>
             <button class="btn btn-add">ADD</button>
         </form>
-        <div th:if="${#lists.isEmpty(todos)}" class="text-center">
+        <div th:if="${#lists.isEmpty(todos)}" class="text-center" style="color: #999999;">
             No todo found
         </div>
         <div class="todo-list">

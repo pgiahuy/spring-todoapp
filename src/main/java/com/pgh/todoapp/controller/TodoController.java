@@ -39,8 +39,10 @@ public class TodoController {
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Long id) {
-        TodoEntity existingTodo = todoRepository.findById(id).orElseThrow(()-> new RuntimeException("Todo not found: "+id));
-        todoRepository.delete(existingTodo);
+        if (!todoRepository.existsById(id)) {
+            throw new RuntimeException("Todo not found");
+        }
+        todoRepository.deleteById(id);
         return "redirect:/";
     }
 }
